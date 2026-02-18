@@ -4,13 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 
 public class VistaRegistro extends JFrame {
+
+    private static Container lienzo;
+
+
     public VistaRegistro(){
         super("Acceso a EventDEV");
         this.setSize(400, 300);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        this.setLayout(new BorderLayout(10, 10));
+        lienzo = this.getContentPane();
+        lienzo.setLayout(new BorderLayout(10, 10));
 
         initUI();
     }
@@ -40,7 +45,6 @@ public class VistaRegistro extends JFrame {
         JPasswordField txtEdad = new JPasswordField();
 
 
-
         pnlFormulario.add(lblNombreCompleto);
         pnlFormulario.add(txtNombreCompleto);
 
@@ -56,18 +60,21 @@ public class VistaRegistro extends JFrame {
         pnlFormulario.add(lblEdad);
         pnlFormulario.add(txtEdad);
 
-        this.add(pnlFormulario, BorderLayout.CENTER);
+        lienzo.add(pnlFormulario, BorderLayout.CENTER);
 
         JLabel bienvenido = new JLabel("Bienvenido a EventDEV");
         bienvenido.setFont(new Font("Arial", Font.BOLD, 18));
         bienvenido.setHorizontalAlignment(SwingConstants.CENTER);
 
-        this.add(bienvenido, BorderLayout.NORTH);
+        lienzo.add(bienvenido, BorderLayout.NORTH);
 
 
         JPanel pnlBotones = new JPanel();
 
-        pnlBotones.setLayout(new FlowLayout(FlowLayout.CENTER));
+        FlowLayout flowLayout = new FlowLayout(FlowLayout.CENTER);
+        flowLayout.setHgap(10);
+        flowLayout.setVgap(10);
+        pnlBotones.setLayout(flowLayout);
 
         JButton btnGuardar = new JButton("Guardar");
         JButton btnCancelar = new JButton("Cancelar");
@@ -75,7 +82,7 @@ public class VistaRegistro extends JFrame {
         pnlBotones.add(btnGuardar);
         pnlBotones.add(btnCancelar);
 
-        this.add(pnlBotones, BorderLayout.SOUTH);
+        lienzo.add(pnlBotones, BorderLayout.SOUTH);
 
     }
 }

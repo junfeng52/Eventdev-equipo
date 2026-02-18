@@ -23,6 +23,7 @@ public class App {
     public static void main(String[] args) {
         // Ejecutar en el hilo de eventos de Swing (buena práctica)
         SwingUtilities.invokeLater(() -> {
+            new VistaLogin().setVisible(true);
             new VistaRegistro().setVisible(true);
         });
     }
