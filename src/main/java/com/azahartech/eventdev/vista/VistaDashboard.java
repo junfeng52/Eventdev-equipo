@@ -14,6 +14,10 @@ public class VistaDashboard extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(true);
 
+        ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/compraIcon.png")).getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH));
+        this.setIconImage(icon.getImage());
+
+
         BorderLayout borderLayout = new BorderLayout(10, 10);
         this.setLayout(borderLayout);
 

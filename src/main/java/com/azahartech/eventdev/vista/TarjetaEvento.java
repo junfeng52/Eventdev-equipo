@@ -19,9 +19,7 @@ public class TarjetaEvento extends JPanel {
         JTextArea taDescripcion = new JTextArea();
         this.add(taDescripcion, BorderLayout.CENTER);
 
-        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/compraIcon.png"));
-        Image image = imageIcon.getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(image);
+        ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/compraIcon.png")).getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH));
 
 
         JButton btnComprar = new JButton("Comprar - " + precio, icon);
