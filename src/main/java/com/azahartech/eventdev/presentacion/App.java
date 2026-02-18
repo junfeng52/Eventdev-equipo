@@ -6,6 +6,7 @@ import com.azahartech.eventdev.pagos.PagoPaypal;
 import com.azahartech.eventdev.pagos.ProcesadorPago;
 import com.azahartech.eventdev.servicio.*;
 import com.azahartech.eventdev.util.UtilidadValidacion;
+import com.azahartech.eventdev.vista.VistaDashboard;
 import com.azahartech.eventdev.vista.VistaLogin;
 import com.azahartech.eventdev.vista.VistaRegistro;
 
@@ -25,6 +26,7 @@ public class App {
         SwingUtilities.invokeLater(() -> {
             new VistaLogin().setVisible(true);
             new VistaRegistro().setVisible(true);
+            new VistaDashboard().setVisible(true);
         });
     }
 

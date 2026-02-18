@@ -5,15 +5,16 @@ import java.awt.*;
 
 public class VistaLogin extends JFrame {
 
-    private static Container LIENZO;
+    private static Container lienzo;
 
     public VistaLogin(){
         super("Acceso a EventDEV");
         this.setSize(400, 300);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        LIENZO = this.getContentPane();
-        LIENZO.setLayout(new BorderLayout(10, 10));
+        BorderLayout borderLayout = new BorderLayout(10, 10);
+        this.setLayout(borderLayout);
+        lienzo = this.getContentPane();
 
         initUI();
     }
@@ -37,13 +38,13 @@ public class VistaLogin extends JFrame {
         pnlFormulario.add(lblPassword);
         pnlFormulario.add(txtPassword);
 
-        LIENZO.add(pnlFormulario, BorderLayout.CENTER);
+        lienzo.add(pnlFormulario, BorderLayout.CENTER);
 
         JLabel bienvenido = new JLabel("Bienvenido a EventDEV");
         bienvenido.setFont(new Font("Arial", Font.BOLD, 18));
         bienvenido.setHorizontalAlignment(SwingConstants.CENTER);
 
-        LIENZO.add(bienvenido, BorderLayout.NORTH);
+        lienzo.add(bienvenido, BorderLayout.NORTH);
 
         JPanel pnlBotones = new JPanel();
 
@@ -58,7 +59,7 @@ public class VistaLogin extends JFrame {
         pnlBotones.add(btnLogin);
         pnlBotones.add(btnRegistro);
 
-        LIENZO.add(pnlBotones, BorderLayout.SOUTH);
+        lienzo.add(pnlBotones, BorderLayout.SOUTH);
 
     }
 }

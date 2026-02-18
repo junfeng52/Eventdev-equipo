@@ -13,9 +13,9 @@ public class VistaRegistro extends JFrame {
         this.setSize(400, 300);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-
+        BorderLayout borderLayout = new BorderLayout(10, 10);
+        this.setLayout(borderLayout);
         lienzo = this.getContentPane();
-        lienzo.setLayout(new BorderLayout(10, 10));
 
         initUI();
     }
