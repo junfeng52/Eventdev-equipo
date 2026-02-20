@@ -29,6 +29,8 @@ public class VistaDashboard extends JFrame {
     private void initUI() {
         JPanel pnlPrincipal = new JPanel();
         BorderLayout borderLayout = new BorderLayout();
+        borderLayout.setHgap(10);
+        borderLayout.setVgap(10);
         pnlPrincipal.setLayout(borderLayout);
 
         JPanel pnlBarraLateral = new JPanel();
@@ -60,7 +62,7 @@ public class VistaDashboard extends JFrame {
         JPanel pnlZonaCentral = new JPanel();
         pnlZonaCentral.setBackground(Color.white);
 
-        pnlPrincipal.add(pnlZonaCentral);
+        pnlPrincipal.add(pnlZonaCentral, BorderLayout.CENTER);
 
         JPanel pnlLista = new JPanel();
         GridLayout gridLayoutLista = new GridLayout(0, 1);
@@ -68,16 +70,16 @@ public class VistaDashboard extends JFrame {
 
         for (int i = 0; i < 10; i++) {
             TarjetaEvento tarjetaEvento = new TarjetaEvento("Concierto A", "Teatro B", "12");
-            tarjetaEvento.setBorder(BorderFactory.createEmptyBorder());
+            tarjetaEvento.setBorder(BorderFactory.createCompoundBorder(tarjetaEvento.getBorder(), BorderFactory.createEmptyBorder(10,10,10,10)));
+
             pnlLista.add(tarjetaEvento);
         }
 
         JScrollPane scroll = new JScrollPane(pnlLista);
+        scroll.setBorder(BorderFactory.createCompoundBorder(scroll.getBorder(), BorderFactory.createEmptyBorder(10,10,10,10)));
         scroll.getVerticalScrollBar().setUnitIncrement(16);
 
         pnlPrincipal.add(scroll, BorderLayout.CENTER);
-
-
 
         lienzo.add(pnlPrincipal);
     }

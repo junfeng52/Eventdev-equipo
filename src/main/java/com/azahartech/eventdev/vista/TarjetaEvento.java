@@ -13,22 +13,24 @@ public class TarjetaEvento extends JPanel {
         BorderLayout borderLayout = new BorderLayout();
         this.setLayout(borderLayout);
 
-
         this.setBorder(BorderFactory.createLineBorder(Color.black));
 
-        JTextArea taDescripcion = new JTextArea();
+        JLabel lblTitulo = new JLabel(titulo);
+        lblTitulo.setFont(new Font("Arial", Font.BOLD, 18));
+        this.add(lblTitulo, BorderLayout.NORTH);
+
+
+        JTextArea taDescripcion = new JTextArea("Fecha: " + fecha + "\nUbicacion confirmada.");
+        taDescripcion.setForeground(Color.black);
+        taDescripcion.setFont(new Font("Arial", Font.PLAIN, 14));
+        taDescripcion.setEditable(false);
+
         this.add(taDescripcion, BorderLayout.CENTER);
 
-        ImageIcon icon = new ImageIcon(new ImageIcon(getClass().getResource("/compraIcon.png")).getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH));
 
-
-        JButton btnComprar = new JButton("Comprar - " + precio, icon);
+        JButton btnComprar = new JButton("Comprar - " + precio);
         this.add(btnComprar, BorderLayout.SOUTH);
 
-        JLabel lblTitulo = new JLabel("Titulo");
-        lblTitulo.setFont(new Font("Arial", Font.BOLD, 18));
-        lblTitulo.setLocale(null);
-        this.add(lblTitulo, BorderLayout.NORTH);
     }
 
 }
