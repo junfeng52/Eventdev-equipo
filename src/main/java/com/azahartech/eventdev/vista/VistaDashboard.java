@@ -8,7 +8,7 @@ public class VistaDashboard extends JFrame {
     private static Container lienzo;
 
     public VistaDashboard() {
-        super("Dashboard");
+        this.setTitle("Dashboard");
         this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);

@@ -9,7 +9,7 @@ public class VistaRegistro extends JFrame {
 
 
     public VistaRegistro(){
-        super("Acceso a EventDEV");
+        this.setTitle("Acceso a EventDEV");
         this.setSize(400, 300);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);

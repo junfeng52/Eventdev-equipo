@@ -8,8 +8,8 @@ public class VistaLogin extends JFrame {
     private static Container lienzo;
 
     public VistaLogin(){
-        super("Acceso a EventDEV");
-        this.setSize(400, 300);
+        this.setTitle("Acceso a EventDEV");
+        this.setSize(400, 200);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         BorderLayout borderLayout = new BorderLayout(10, 10);
