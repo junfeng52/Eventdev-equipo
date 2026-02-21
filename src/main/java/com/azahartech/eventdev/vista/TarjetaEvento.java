@@ -11,6 +11,8 @@ public class TarjetaEvento extends JPanel {
 
     public TarjetaEvento(String titulo, String fecha, String precio) {
         BorderLayout borderLayout = new BorderLayout();
+        borderLayout.setHgap(10);
+        borderLayout.setVgap(10);
         this.setLayout(borderLayout);
 
         this.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -23,6 +25,7 @@ public class TarjetaEvento extends JPanel {
         JTextArea taDescripcion = new JTextArea("Fecha: " + fecha + "\nUbicacion confirmada.");
         taDescripcion.setForeground(Color.black);
         taDescripcion.setFont(new Font("Arial", Font.PLAIN, 14));
+        taDescripcion.setBackground(null);
         taDescripcion.setEditable(false);
 
         this.add(taDescripcion, BorderLayout.CENTER);
