@@ -4,13 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class VistaLogin extends JFrame {
+
+    private static Container lienzo;
+
     public VistaLogin(){
-        super("Acceso a EventDEV");
-        this.setSize(400, 300);
+        this.setTitle("Acceso a EventDEV");
+        this.setSize(400, 200);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-
-        this.setLayout(new BorderLayout(10, 10));
+        BorderLayout borderLayout = new BorderLayout(10, 10);
+        this.setLayout(borderLayout);
+        lienzo = this.getContentPane();
 
         initUI();
     }
@@ -34,17 +38,20 @@ public class VistaLogin extends JFrame {
         pnlFormulario.add(lblPassword);
         pnlFormulario.add(txtPassword);
 
-        this.add(pnlFormulario, BorderLayout.CENTER);
+        lienzo.add(pnlFormulario, BorderLayout.CENTER);
 
         JLabel bienvenido = new JLabel("Bienvenido a EventDEV");
         bienvenido.setFont(new Font("Arial", Font.BOLD, 18));
         bienvenido.setHorizontalAlignment(SwingConstants.CENTER);
 
-        this.add(bienvenido, BorderLayout.NORTH);
+        lienzo.add(bienvenido, BorderLayout.NORTH);
 
         JPanel pnlBotones = new JPanel();
 
-        pnlBotones.setLayout(new FlowLayout(FlowLayout.CENTER));
+        FlowLayout flowLayout = new FlowLayout(FlowLayout.CENTER);
+        flowLayout.setHgap(10);
+        flowLayout.setVgap(10);
+        pnlBotones.setLayout(flowLayout);
 
         JButton btnLogin = new JButton("Entrar");
         JButton btnRegistro = new JButton("Registrarse");
@@ -52,7 +59,7 @@ public class VistaLogin extends JFrame {
         pnlBotones.add(btnLogin);
         pnlBotones.add(btnRegistro);
 
-        this.add(pnlBotones, BorderLayout.SOUTH);
+        lienzo.add(pnlBotones, BorderLayout.SOUTH);
 
     }
 }
