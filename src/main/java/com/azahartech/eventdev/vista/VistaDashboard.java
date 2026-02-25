@@ -2,6 +2,8 @@ package com.azahartech.eventdev.vista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class VistaDashboard extends JFrame {
 
@@ -9,7 +11,11 @@ public class VistaDashboard extends JFrame {
 
     private JButton btnCatalogo, btnMisEntradas, btnPerfil, btnSalir;
 
-    public VistaDashboard() {
+    private String nombreUsuario;
+
+    public VistaDashboard(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+
         initFrame();
 
         initUI();
@@ -18,7 +24,7 @@ public class VistaDashboard extends JFrame {
     private void initFrame() {
         this.setTitle("Dashboard");
         this.setSize(800, 600);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(true);
 
@@ -61,7 +67,7 @@ public class VistaDashboard extends JFrame {
         FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT);
         pnlBarraDeEstado.setLayout(flowLayout);
 
-        JLabel lblUsuario = new JLabel("Usuario: Invitado");
+        JLabel lblUsuario = new JLabel("Usuario: " + this.nombreUsuario);
         pnlBarraDeEstado.add(lblUsuario);
 
         lienzo.add(pnlBarraDeEstado, BorderLayout.SOUTH);
@@ -94,12 +100,23 @@ public class VistaDashboard extends JFrame {
     }
 
     private void initListeners(){
-        this.btnSalir.addActionListener(action -> {
-            int confirmar = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que quieres cerrar la aplicación?", "Confirmar salida", JOptionPane.YES_NO_OPTION);
-
-            if (confirmar == JOptionPane.YES_OPTION) {
-                System.exit(0);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                intentarSalir();
             }
         });
+
+        this.btnSalir.addActionListener(action -> intentarSalir());
+    }
+
+    private void intentarSalir() {
+        int confirmar = JOptionPane.showConfirmDialog(this, "¿Seguro que quieres cerrar sesión?", "Confirmar cierre de session", JOptionPane.YES_NO_OPTION);
+
+        if (confirmar == JOptionPane.YES_OPTION) {
+            this.dispose();
+            VistaLogin vistaLogin = new VistaLogin();
+            vistaLogin.setVisible(true);
+        }
     }
 }

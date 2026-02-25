@@ -1,5 +1,6 @@
 package com.azahartech.eventdev.util;
 
+import javax.swing.*;
 import javax.swing.text.JTextComponent;
 import java.time.LocalDate;
 import java.util.*;
@@ -95,6 +96,19 @@ public class UtilidadValidacion {
 
 
         resultado = String.format("EVT-%s-%s", año, siglas);
+
+        return resultado;
+    }
+
+    public static boolean esCampoVacio(JTextComponent component) {
+        boolean resultado;
+
+        if (component instanceof JPasswordField) {
+            resultado = "".equals(new String(((JPasswordField) component).getPassword()).trim());
+        } else {
+            resultado = "".equals(component.getText().trim());
+        }
+
 
         return resultado;
     }

@@ -37,8 +37,8 @@ public class App {
         } else {
             SwingUtilities.invokeLater(() -> {
                 new VistaLogin().setVisible(true);
-                new VistaRegistro().setVisible(true);
-                new VistaDashboard().setVisible(true);
+                //new VistaRegistro().setVisible(true);
+                //new VistaDashboard().setVisible(true);
             });
         }
     }

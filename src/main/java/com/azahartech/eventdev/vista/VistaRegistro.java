@@ -113,24 +113,34 @@ public class VistaRegistro extends JFrame {
     }
 
     private void intentaGuardar() {
-        if (this.txtNombreCompleto.getText().trim().equals("")){
+        boolean campoVacioNombreCompleto = UtilidadValidacion.esCampoVacio(this.txtNombreCompleto);
+        boolean campoVacioEmail = UtilidadValidacion.esCampoVacio(this.txtEmail);
+        boolean campoVacioEdad = UtilidadValidacion.esCampoVacio(this.txtEdad);
+        boolean campoVacioContraseña = UtilidadValidacion.esCampoVacio(this.txtContraseña);
+        boolean campoVacioRepetirContraseña = UtilidadValidacion.esCampoVacio(this.txtRepetirContraseña);
+        boolean contraseñasIguales = new String(this.txtContraseña.getPassword()).equals(new String(this.txtRepetirContraseña.getPassword()));
+
+        if (campoVacioNombreCompleto){
             System.out.println("El campo de nombre completo esta vacia");
         }
-        if (this.txtEmail.getText().trim().equals("")){
+        if (campoVacioEmail){
             System.out.println("El campo de email esta vacia");
         }
-        if (this.txtEdad.getText().trim().equals("")){
+        if (campoVacioEdad){
             System.out.println("El campo de edad esta vacia");
         }
-        if (new String(this.txtContraseña.getPassword()).trim().equals("")){
+
+        if (campoVacioContraseña){
             System.out.println("El campo de contraseña esta vacia");
         }
-        if (new String(this.txtRepetirContraseña.getPassword()).trim().equals("")){
+
+        if (campoVacioRepetirContraseña){
             System.out.println("El campo de repetir contraseña esta vacia");
         }
-        if (!(new String(this.txtContraseña.getPassword()).trim().equals("")) && !(new String(this.txtRepetirContraseña.getPassword()).trim().equals("")) && new String(this.txtContraseña.getPassword()).equals(new String(this.txtRepetirContraseña.getPassword()))) {
+
+        if (!campoVacioContraseña && !campoVacioRepetirContraseña && contraseñasIguales) {
             System.out.println("Contraseña Correcta");
-        } else if (!(new String(this.txtContraseña.getPassword()).trim().equals("")) && !(new String(this.txtRepetirContraseña.getPassword()).trim().equals("")) && !(new String(this.txtContraseña.getPassword()).equals(new String(this.txtRepetirContraseña.getPassword())))){
+        } else if (!campoVacioContraseña && !campoVacioRepetirContraseña && !contraseñasIguales){
             System.out.println("Contraseña incorrecta");
         }
 
