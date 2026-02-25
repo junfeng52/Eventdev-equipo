@@ -1,6 +1,8 @@
 package com.azahartech.eventdev.util;
 
+import javax.swing.text.JTextComponent;
 import java.time.LocalDate;
+import java.util.*;
 
 public class UtilidadValidacion {
     /**

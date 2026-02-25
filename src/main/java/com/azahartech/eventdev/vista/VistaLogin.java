@@ -4,19 +4,29 @@ import javax.swing.*;
 import java.awt.*;
 
 public class VistaLogin extends JFrame {
-
     private static Container lienzo;
 
+    private JTextField txtEmail;
+    private JPasswordField txtContraseña;
+    private JButton btnLogin;
+    private JButton btnRegistro;
+
     public VistaLogin(){
+        initFrame();
+
+        initUI();
+    }
+
+    private void initFrame() {
         this.setTitle("Acceso a EventDEV");
         this.setSize(400, 200);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
+
         BorderLayout borderLayout = new BorderLayout(10, 10);
         this.setLayout(borderLayout);
-        lienzo = this.getContentPane();
 
-        initUI();
+        lienzo = this.getContentPane();
     }
 
     private void initUI(){
@@ -29,14 +39,14 @@ public class VistaLogin extends JFrame {
         pnlFormulario.setLayout(gridLayout);
 
         JLabel lblEmail = new JLabel("Email:");
-        JTextField txtEmail = new JTextField();
+        this.txtEmail = new JTextField();
         JLabel lblPassword = new JLabel("Contraseña:");
-        JPasswordField txtPassword = new JPasswordField();
+        this.txtContraseña = new JPasswordField();
 
         pnlFormulario.add(lblEmail);
-        pnlFormulario.add(txtEmail);
+        pnlFormulario.add(this.txtEmail);
         pnlFormulario.add(lblPassword);
-        pnlFormulario.add(txtPassword);
+        pnlFormulario.add(this.txtContraseña);
 
         lienzo.add(pnlFormulario, BorderLayout.CENTER);
 
@@ -53,13 +63,36 @@ public class VistaLogin extends JFrame {
         flowLayout.setVgap(10);
         pnlBotones.setLayout(flowLayout);
 
-        JButton btnLogin = new JButton("Entrar");
-        JButton btnRegistro = new JButton("Registrarse");
+        this.btnLogin = new JButton("Entrar");
+        this.btnRegistro = new JButton("Registrarse");
 
-        pnlBotones.add(btnLogin);
-        pnlBotones.add(btnRegistro);
+        pnlBotones.add(this.btnLogin);
+        pnlBotones.add(this.btnRegistro);
 
         lienzo.add(pnlBotones, BorderLayout.SOUTH);
 
+
+        initListeners();
+    }
+
+    private void initListeners() {
+        this.txtContraseña.addActionListener(action -> intentarLogin());
+        this.btnLogin.addActionListener(action -> intentarLogin());
+    }
+
+    private void intentarLogin() {
+        {
+            String email = this.txtEmail.getText();
+            String contrasenya = new String(this.txtContraseña.getPassword());
+
+            if (email.equals("admin@eventdev.com") && contrasenya.equals("1234")){
+                JOptionPane.showMessageDialog(this, "¡Bienvenido al sistema, Admin!", "Acceso concedido", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.","Acceso denegado", JOptionPane.ERROR_MESSAGE);
+            }
+
+            txtContraseña.setText("");
+            txtContraseña.requestFocus();
+        }
     }
 }

@@ -7,20 +7,25 @@ public class VistaDashboard extends JFrame {
 
     private static Container lienzo;
 
+    private JButton btnCatalogo, btnMisEntradas, btnPerfil, btnSalir;
+
     public VistaDashboard() {
+        initFrame();
+
+        initUI();
+    }
+
+    private void initFrame() {
         this.setTitle("Dashboard");
         this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(true);
 
-
         BorderLayout borderLayout = new BorderLayout(10, 10);
         this.setLayout(borderLayout);
 
         lienzo = this.getContentPane();
-
-        initUI();
     }
 
     private void initUI() {
@@ -32,13 +37,23 @@ public class VistaDashboard extends JFrame {
         pnlBarraLateral.setBorder(BorderFactory.createCompoundBorder(pnlBarraLateral.getBorder(), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         pnlBarraLateral.setLayout(gridLayoutBarraLateral);
 
-        String[] nombreBotones = {"Catalogo", "Mis Entradas", "Perfil", "Salir"};
+        this.btnCatalogo = new JButton("Catalogo");
+        this.btnMisEntradas = new JButton("Mis Entradas");
+        this.btnPerfil = new JButton("Perfil");
+        this.btnSalir = new JButton("Salir");
 
-        for (String nombre : nombreBotones) {
-            JButton boton = new JButton(nombre);
-            boton.setBorder(BorderFactory.createCompoundBorder(boton.getBorder(), BorderFactory.createEmptyBorder(10, 10 , 10, 10)));
-            pnlBarraLateral.add(boton);
-        }
+
+        this.btnCatalogo.setBorder(BorderFactory.createCompoundBorder(this.btnCatalogo.getBorder(), BorderFactory.createEmptyBorder(10, 10 , 10, 10)));
+        this.btnMisEntradas.setBorder(BorderFactory.createCompoundBorder(this.btnMisEntradas.getBorder(), BorderFactory.createEmptyBorder(10, 10 , 10, 10)));
+        this.btnPerfil.setBorder(BorderFactory.createCompoundBorder(this.btnPerfil.getBorder(), BorderFactory.createEmptyBorder(10, 10 , 10, 10)));
+        this.btnSalir.setBorder(BorderFactory.createCompoundBorder(this.btnSalir.getBorder(), BorderFactory.createEmptyBorder(10, 10 , 10, 10)));
+
+
+        pnlBarraLateral.add(this.btnCatalogo);
+        pnlBarraLateral.add(this.btnMisEntradas);
+        pnlBarraLateral.add(this.btnPerfil);
+        pnlBarraLateral.add(this.btnSalir);
+
 
         lienzo.add(pnlBarraLateral, BorderLayout.WEST);
 
@@ -74,5 +89,17 @@ public class VistaDashboard extends JFrame {
         scroll.getVerticalScrollBar().setUnitIncrement(16);
 
         lienzo.add(scroll, BorderLayout.CENTER);
+
+        initListeners();
+    }
+
+    private void initListeners(){
+        this.btnSalir.addActionListener(action -> {
+            int confirmar = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que quieres cerrar la aplicación?", "Confirmar salida", JOptionPane.YES_NO_OPTION);
+
+            if (confirmar == JOptionPane.YES_OPTION) {
+                System.exit(0);
+            }
+        });
     }
 }
