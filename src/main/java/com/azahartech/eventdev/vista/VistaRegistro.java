@@ -123,9 +123,11 @@ public class VistaRegistro extends JFrame {
         if (campoVacioNombreCompleto){
             System.out.println("El campo de nombre completo esta vacia");
         }
+
         if (campoVacioEmail){
             System.out.println("El campo de email esta vacia");
         }
+
         if (campoVacioEdad){
             System.out.println("El campo de edad esta vacia");
         }
@@ -139,9 +141,9 @@ public class VistaRegistro extends JFrame {
         }
 
         if (!campoVacioContraseña && !campoVacioRepetirContraseña && contraseñasIguales) {
-            System.out.println("Contraseña Correcta");
+            System.out.println("Usuario registrado");
         } else if (!campoVacioContraseña && !campoVacioRepetirContraseña && !contraseñasIguales){
-            System.out.println("Contraseña incorrecta");
+            System.out.println("Las contraseñas no coinciden");
         }
 
     }
