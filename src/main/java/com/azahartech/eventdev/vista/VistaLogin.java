@@ -2,6 +2,8 @@ package com.azahartech.eventdev.vista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class VistaLogin extends JFrame {
     private static Container lienzo;
@@ -10,6 +12,7 @@ public class VistaLogin extends JFrame {
     private JPasswordField txtContraseña;
     private JButton btnLogin;
     private JButton btnRegistro;
+    private JButton btnSalir;
 
     public VistaLogin(){
         initFrame();
@@ -20,7 +23,7 @@ public class VistaLogin extends JFrame {
     private void initFrame() {
         this.setTitle("Acceso a EventDEV");
         this.setSize(400, 200);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
         BorderLayout borderLayout = new BorderLayout(10, 10);
@@ -65,9 +68,11 @@ public class VistaLogin extends JFrame {
 
         this.btnLogin = new JButton("Entrar");
         this.btnRegistro = new JButton("Registrarse");
+        this.btnSalir = new JButton("Salir");
 
         pnlBotones.add(this.btnLogin);
         pnlBotones.add(this.btnRegistro);
+        pnlBotones.add(this.btnSalir);
 
         lienzo.add(pnlBotones, BorderLayout.SOUTH);
 
@@ -76,8 +81,24 @@ public class VistaLogin extends JFrame {
     }
 
     private void initListeners() {
+        this.btnSalir.addActionListener(action -> intentarSalir());
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                intentarSalir();
+            }
+        });
+
         this.txtContraseña.addActionListener(action -> intentarLogin());
         this.btnLogin.addActionListener(action -> intentarLogin());
+    }
+
+    private void intentarSalir() {
+        int confirmar = JOptionPane.showConfirmDialog(this, "¿Estás seguro de que quieres cerrar la aplicación?", "Confirmar salida", JOptionPane.YES_NO_OPTION);
+
+        if (confirmar == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }
 
     private void intentarLogin() {
@@ -87,6 +108,9 @@ public class VistaLogin extends JFrame {
 
             if (email.equals("admin@eventdev.com") && contrasenya.equals("1234")){
                 JOptionPane.showMessageDialog(this, "¡Bienvenido al sistema, Admin!", "Acceso concedido", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+                VistaDashboard dashboard = new VistaDashboard();
+                dashboard.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.","Acceso denegado", JOptionPane.ERROR_MESSAGE);
             }
