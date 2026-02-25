@@ -108,9 +108,6 @@ public class VistaLogin extends JFrame {
 
             if (email.equals("admin@eventdev.com") && contrasenya.equals("1234")){
                 JOptionPane.showMessageDialog(this, "¡Bienvenido al sistema, Admin!", "Acceso concedido", JOptionPane.INFORMATION_MESSAGE);
-                this.dispose();
-                VistaDashboard dashboard = new VistaDashboard();
-                dashboard.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.","Acceso denegado", JOptionPane.ERROR_MESSAGE);
             }
