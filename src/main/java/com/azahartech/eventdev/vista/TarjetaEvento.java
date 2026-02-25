@@ -8,6 +8,7 @@ import java.net.URL;
 public class TarjetaEvento extends JPanel {
 
     public static Container lienzo;
+    private JButton btnComprar;
 
     public TarjetaEvento(String titulo, String fecha, String precio) {
         BorderLayout borderLayout = new BorderLayout();
@@ -31,9 +32,18 @@ public class TarjetaEvento extends JPanel {
         this.add(taDescripcion, BorderLayout.CENTER);
 
 
-        JButton btnComprar = new JButton("Comprar - " + precio);
-        this.add(btnComprar, BorderLayout.SOUTH);
+        this.btnComprar = new JButton("Comprar - " + precio);
+        this.add(this.btnComprar, BorderLayout.SOUTH);
 
+        this.btnComprar.addActionListener(e -> {
+            int option = JOptionPane.showConfirmDialog(this, "¿Quieres comprar una entrada para " + titulo + "?", "Confirmar compra", JOptionPane.YES_NO_OPTION);
+
+            if (option == JOptionPane.YES_OPTION){
+                JOptionPane.showMessageDialog(this, "¡Entrada comprada! (simulación)", "Exito", JOptionPane.INFORMATION_MESSAGE);
+                this.btnComprar.setEnabled(false);
+                this.btnComprar.setText("Comprado");
+            }
+        });
     }
 
 }
