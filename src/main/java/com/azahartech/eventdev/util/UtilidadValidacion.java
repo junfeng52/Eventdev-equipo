@@ -67,30 +67,30 @@ public class UtilidadValidacion {
                 break;
 
             case 2:
-                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 3) ? 3 : partesDeNombre.length) +
-                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 2) ? 2 : partesDeNombre.length)).toUpperCase();
+                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 3) ? 3 : partesDeNombre[0].length()) +
+                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 2) ? 2 : partesDeNombre[1].length())).toUpperCase();
                 break;
 
             case 3:
-                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 2) ? 2 : partesDeNombre.length) +
-                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 2) ? 2 : partesDeNombre.length) +
-                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre.length)).toUpperCase();
+                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 2) ? 2 : partesDeNombre[0].length()) +
+                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 2) ? 2 : partesDeNombre[1].length()) +
+                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre[2].length())).toUpperCase();
                 break;
 
             case 4:
-                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 2) ? 2 : partesDeNombre.length) +
-                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[3].substring(0, (partesDeNombre[3].length() >= 1) ? 1 : partesDeNombre.length)).toUpperCase();
+                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 2) ? 2 : partesDeNombre[0].length()) +
+                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 1) ? 1 : partesDeNombre[1].length()) +
+                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre[2].length()) +
+                          partesDeNombre[3].substring(0, (partesDeNombre[3].length() >= 1) ? 1 : partesDeNombre[3].length())).toUpperCase();
                 break;
 
             case 5:
             default:
-                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[3].substring(0, (partesDeNombre[3].length() >= 1) ? 1 : partesDeNombre.length) +
-                          partesDeNombre[4].substring(0, (partesDeNombre[4].length() >= 1) ? 1 : partesDeNombre.length)).toUpperCase();
+                siglas = (partesDeNombre[0].substring(0, (partesDeNombre[0].length() >= 1) ? 1 : partesDeNombre[0].length()) +
+                          partesDeNombre[1].substring(0, (partesDeNombre[1].length() >= 1) ? 1 : partesDeNombre[1].length()) +
+                          partesDeNombre[2].substring(0, (partesDeNombre[2].length() >= 1) ? 1 : partesDeNombre[2].length()) +
+                          partesDeNombre[3].substring(0, (partesDeNombre[3].length() >= 1) ? 1 : partesDeNombre[3].length()) +
+                          partesDeNombre[4].substring(0, (partesDeNombre[4].length() >= 1) ? 1 : partesDeNombre[4].length())).toUpperCase();
                 break;
         }
 
