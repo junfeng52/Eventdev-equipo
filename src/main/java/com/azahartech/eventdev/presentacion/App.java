@@ -35,6 +35,11 @@ public class App {
             console();
 
         } else {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             SwingUtilities.invokeLater(() -> {
                 //new VistaLogin().setVisible(true);
                 //new VistaRegistro().setVisible(true);
