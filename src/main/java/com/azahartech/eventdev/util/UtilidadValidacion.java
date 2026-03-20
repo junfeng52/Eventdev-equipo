@@ -112,4 +112,15 @@ public class UtilidadValidacion {
 
         return resultado;
     }
+
+    public static boolean esPrecioValido(String precio){
+        boolean resulatdo;
+        try{
+            Double.parseDouble(precio);
+            resulatdo = true;
+        } catch (RuntimeException e) {
+            resulatdo = false;
+        }
+        return resulatdo;
+    }
 }

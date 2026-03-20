@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public class VistaDashboard extends JFrame {
 
-    private static Container lienzo;
+    private Container lienzo;
 
     private JButton btnCatalogo, btnMisEntradas, btnPerfil, btnSalir;
 
@@ -28,11 +28,16 @@ public class VistaDashboard extends JFrame {
 
     private JTable eventosTable;
 
+    private JMenuItem nuevoEventoItem;
+
+    private DefaultTableModel eventosTableModel;
 
 
-    public VistaDashboard(String nombreUsuario) {
+
+
+    public VistaDashboard(ServicioEvento servicioEvento,String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
-        this.servicioEvento = new ServicioEvento();
+        this.servicioEvento = servicioEvento;
 
         initFrame();
 
@@ -129,7 +134,7 @@ public class VistaDashboard extends JFrame {
 
         String[] columnas = {"ID", "Nombre", "Fecha", "Precio"};
 
-        DefaultTableModel eventosTableModel = new DefaultTableModel(columnas, 0) {
+        eventosTableModel = new DefaultTableModel(columnas, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -140,11 +145,7 @@ public class VistaDashboard extends JFrame {
             servicioEvento.registrarEvento(new Partido("Partido " + i, LocalDate.now().plusDays(i), new Recinto("Recinto " + i, "Direccion " + i, (int) Math.pow(i + Math.sqrt(i+1) ,i)), (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100, "EquipoLocal " + i, "EquipoVisitante " + i, (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100));
         }
 
-        for (Evento evento : servicioEvento.listarTodosLosEventos()) {
-            Object[] datos = {evento.getId(), evento.getNombre(), evento.getFecha(), evento.getPrecio()};
-
-            eventosTableModel.addRow(datos);
-        }
+        refrescarTabla();
 
         eventosTable = new JTable(eventosTableModel);
 
@@ -180,7 +181,9 @@ public class VistaDashboard extends JFrame {
         archivoMenu.add(cerrarSessiónMenuItem);
         archivoMenu.add(salirMenuItem);
 
-        accionesMenu.add(new JMenuItem("Nuevo evento"));
+        nuevoEventoItem = new JMenuItem("Nuevo evento");
+
+        accionesMenu.add(nuevoEventoItem);
 
         principalMenuBar.add(archivoMenu);
         principalMenuBar.add(accionesMenu);
@@ -189,6 +192,8 @@ public class VistaDashboard extends JFrame {
     }
 
     private void initListeners(){
+        nuevoEventoItem.addActionListener(action -> crearNuevoEvento());
+
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -197,6 +202,15 @@ public class VistaDashboard extends JFrame {
         });
 
         this.btnSalir.addActionListener(action -> intentarCerrarSession());
+    }
+
+    private void refrescarTabla(){
+        eventosTableModel.setRowCount(0);
+        for (Evento evento : servicioEvento.listarTodosLosEventos()) {
+            Object[] datos = {evento.getId(), evento.getNombre(), evento.getFecha(), evento.getPrecio()};
+
+            eventosTableModel.addRow(datos);
+        }
     }
 
     private void verDetalles() {
@@ -210,12 +224,18 @@ public class VistaDashboard extends JFrame {
         JOptionPane.showMessageDialog(this, "Has seleccionado: " + nombreEvento + "\n Fecha: " + fechaEvento + "\n Precio: " + precioEvento + " €");
     }
 
+    private void crearNuevoEvento() {
+        NuevoEventoDialog nuevoEventoDialog = new NuevoEventoDialog(this, this.servicioEvento);
+        nuevoEventoDialog.setVisible(true);
+        refrescarTabla();
+    }
+
     private void intentarCerrarSession() {
         int confirmar = JOptionPane.showConfirmDialog(this, "¿Seguro que quieres cerrar sesión?", "Confirmar cierre de session", JOptionPane.YES_NO_OPTION);
 
         if (confirmar == JOptionPane.YES_OPTION) {
             this.dispose();
-            VistaLogin vistaLogin = new VistaLogin();
+            VistaLogin vistaLogin = new VistaLogin(this.servicioEvento);
             vistaLogin.setVisible(true);
         }
     }

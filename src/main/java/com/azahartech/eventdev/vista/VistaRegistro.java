@@ -1,5 +1,6 @@
 package com.azahartech.eventdev.vista;
 
+import com.azahartech.eventdev.servicio.ServicioEvento;
 import com.azahartech.eventdev.util.UtilidadValidacion;
 
 import javax.swing.*;
@@ -11,6 +12,7 @@ import java.util.Map;
 public class VistaRegistro extends JFrame {
 
     private static Container lienzo;
+    private ServicioEvento servicioEvento;
 
     private JTextField txtNombreCompleto;
     private JTextField txtEmail;
@@ -23,7 +25,8 @@ public class VistaRegistro extends JFrame {
 
 
 
-    public VistaRegistro(){
+    public VistaRegistro(ServicioEvento servicioEvento){
+        this.servicioEvento = servicioEvento;
         initFrame();
         initUI();
     }

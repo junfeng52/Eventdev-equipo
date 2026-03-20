@@ -35,15 +35,16 @@ public class App {
             console();
 
         } else {
-            try {
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+
             SwingUtilities.invokeLater(() -> {
-                //new VistaLogin().setVisible(true);
-                //new VistaRegistro().setVisible(true);
-                new VistaDashboard("").setVisible(true);
+                try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                new VistaLogin(SERVICIO_EVENTO).setVisible(true);
+                //new VistaRegistro(SERVICIO_EVENTO).setVisible(true);
+                new VistaDashboard(SERVICIO_EVENTO, "").setVisible(true);
             });
         }
     }
