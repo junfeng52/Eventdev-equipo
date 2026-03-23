@@ -82,13 +82,13 @@ public class NuevoEventoDialog extends JDialog {
     private void initListener(){
         this.precioText.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e) {
+            public void keyReleased(KeyEvent e) {
                 if (UtilidadValidacion.esPrecioValido(precioText.getText().trim())){
-                    precioText.setForeground(Color.WHITE);
+                    precioText.setBackground(Color.WHITE);
                 } else {
-                    precioText.setForeground(Color.RED);
+                    precioText.setBackground(Color.RED);
                 }
-                super.keyTyped(e);
+                super.keyReleased(e);
             }
         });
         this.btnCancelar.addActionListener(action -> cancelar());

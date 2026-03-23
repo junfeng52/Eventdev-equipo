@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class App {
     private final static Scanner SCANNER = new Scanner(System.in);
     private final static ServicioUsuario SERVICIO_USUARIO = new ServicioUsuario();
-    private final static ServicioEvento SERVICIO_EVENTO = new ServicioEvento();
+    public final static ServicioEvento SERVICIO_EVENTO = new ServicioEvento();
 
     private static boolean demoMode = false;
     private static boolean consoleMode = false;

@@ -3,6 +3,7 @@ package com.azahartech.eventdev.vista;
 import com.azahartech.eventdev.modelo.Evento;
 import com.azahartech.eventdev.modelo.Partido;
 import com.azahartech.eventdev.modelo.Recinto;
+import static com.azahartech.eventdev.presentacion.App.SERVICIO_EVENTO;
 import com.azahartech.eventdev.servicio.ServicioEvento;
 
 import javax.swing.*;
@@ -15,6 +16,7 @@ import java.awt.event.WindowEvent;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Objects;
+
 
 public class VistaDashboard extends JFrame {
 
@@ -35,9 +37,9 @@ public class VistaDashboard extends JFrame {
 
 
 
-    public VistaDashboard(ServicioEvento servicioEvento,String nombreUsuario) {
+    public VistaDashboard(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
-        this.servicioEvento = servicioEvento;
+        this.servicioEvento = SERVICIO_EVENTO;
 
         initFrame();
 
