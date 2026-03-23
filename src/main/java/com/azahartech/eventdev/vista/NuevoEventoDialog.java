@@ -12,6 +12,8 @@ import java.awt.event.KeyListener;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import static com.azahartech.eventdev.presentacion.App.SERVICIO_EVENTO;
+
 public class NuevoEventoDialog extends JDialog {
     private ServicioEvento servicioEvento;
 
@@ -22,10 +24,10 @@ public class NuevoEventoDialog extends JDialog {
     private JButton btnCancelar;
     private JButton btnGuardar;
 
-    public NuevoEventoDialog(JFrame padre, ServicioEvento servicioEvento) {
+    public NuevoEventoDialog(JFrame padre) {
         super(padre, "Nuevo Evento", true);
 
-        this.servicioEvento = servicioEvento;
+        this.servicioEvento = SERVICIO_EVENTO;
 
         this.setSize(700, 200);
         this.setLocationRelativeTo(this);

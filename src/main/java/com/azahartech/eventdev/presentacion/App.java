@@ -42,9 +42,9 @@ public class App {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                new VistaLogin(SERVICIO_EVENTO).setVisible(true);
+                new VistaLogin().setVisible(true);
                 //new VistaRegistro(SERVICIO_EVENTO).setVisible(true);
-                new VistaDashboard(SERVICIO_EVENTO, "").setVisible(true);
+                new VistaDashboard("").setVisible(true);
             });
         }
     }

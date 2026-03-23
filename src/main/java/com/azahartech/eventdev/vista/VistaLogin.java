@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import static  com.azahartech.eventdev.presentacion.App.SERVICIO_EVENTO;
+
 public class VistaLogin extends JFrame {
     private Container lienzo;
     private ServicioEvento servicioEvento;
@@ -17,8 +19,8 @@ public class VistaLogin extends JFrame {
     private JButton btnRegistro;
     private JButton btnSalir;
 
-    public VistaLogin(ServicioEvento servicioEvento){
-        this.servicioEvento = servicioEvento;
+    public VistaLogin(){
+        this.servicioEvento = SERVICIO_EVENTO;
 
         initFrame();
 
@@ -114,7 +116,7 @@ public class VistaLogin extends JFrame {
             if (email.equals("admin@eventdev.com") && contrasenya.equals("1234")){
                 JOptionPane.showMessageDialog(this, "¡Bienvenido al sistema, Admin!", "Acceso concedido", JOptionPane.INFORMATION_MESSAGE);
                 this.dispose();
-                VistaDashboard dashboard = new VistaDashboard(this.servicioEvento, this.txtEmail.getText());
+                VistaDashboard dashboard = new VistaDashboard(this.txtEmail.getText());
                 dashboard.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.","Acceso denegado", JOptionPane.ERROR_MESSAGE);

@@ -6,6 +6,8 @@ import com.azahartech.eventdev.datos.RepositorioGenerico;
 import java.time.LocalDate;
 import java.util.*;
 
+import java.io.*;
+
 /**
  * Clase ServicioEvento
  */
@@ -132,5 +134,71 @@ public class ServicioEvento {
             System.out.println("-----------------------------------");
         }
 
+    }
+
+    public void importarEventosDesdeCSV(String rutaArchivo) {
+        File ruta = new File(rutaArchivo);
+
+        try (BufferedReader lectura = new BufferedReader(new FileReader(ruta))) {
+            String linea;
+            int numlinea = 1;
+
+            lectura.readLine(); // Salta la primera fila donde estan las columnas
+
+            while ((linea = lectura.readLine()) != null) {
+                numlinea++;
+                String[] datos = linea.split(";");
+
+                String nombreStr;
+                String ciudadStr;
+                LocalDate fecha;
+                int aforoInt;
+                double precioDouble;
+
+                try {
+                    nombreStr = datos[0];
+                } catch (RuntimeException e) {
+                    System.out.println("Error en línea" + numlinea + ": Nombre invalido.");
+                    nombreStr = null;
+                }
+
+                try {
+                    ciudadStr = datos[1];
+                } catch (RuntimeException e) {
+                    System.out.println("Error en línea" + numlinea + ": Ciudad invalido.");
+                    ciudadStr = null;
+                }
+
+                try {
+                    fecha = LocalDate.parse(datos[2]);
+                } catch (RuntimeException e) {
+                    System.out.println("Error en línea" + numlinea + ": Fecha invalido.");
+                    fecha = null;
+                }
+
+                try {
+                    aforoInt = Integer.parseInt(datos[3]);
+                } catch (RuntimeException e) {
+                    System.out.println("Error en línea" + numlinea + ": Aforo invalido.");
+                    aforoInt = 0;
+                }
+
+                try {
+                    precioDouble = Double.parseDouble(datos[4]);
+                } catch (RuntimeException e) {
+                    System.out.println("Error en línea" + numlinea + ": Precio invalido.");
+                    precioDouble = 0;
+                }
+
+                Partido nuevoEvento = new Partido(nombreStr, fecha, new Recinto(ciudadStr, null, aforoInt), precioDouble, null, null, 0);
+
+                this.repo.guardar(nuevoEvento);
+                System.out.println("Importado: " + nombreStr);
+            }
+        }catch (FileNotFoundException e) {
+            System.err.println("Archivo no encontrado");
+        } catch (IOException e) {
+            System.err.println("Error de lectura");
+        }
     }
 }

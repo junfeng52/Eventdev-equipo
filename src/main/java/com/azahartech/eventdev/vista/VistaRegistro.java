@@ -9,6 +9,8 @@ import java.awt.*;
 import java.util.List;
 import java.util.Map;
 
+import static com.azahartech.eventdev.presentacion.App.SERVICIO_EVENTO;
+
 public class VistaRegistro extends JFrame {
 
     private static Container lienzo;
@@ -25,8 +27,8 @@ public class VistaRegistro extends JFrame {
 
 
 
-    public VistaRegistro(ServicioEvento servicioEvento){
-        this.servicioEvento = servicioEvento;
+    public VistaRegistro(){
+        this.servicioEvento = SERVICIO_EVENTO;
         initFrame();
         initUI();
     }
