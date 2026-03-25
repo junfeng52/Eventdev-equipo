@@ -10,14 +10,14 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class UtilidadLog {
-    private static final String RUTA_CARPETA_DATOS = "datos/";
+    private static final String RUTA_CARPETA_DATOS = "log/";
     private static final String RUTA_LOG = RUTA_CARPETA_DATOS + "auditoria.log";
 
     public static void registrar(NivelLog nivelLog, String mensaje) {
         File carpetaDatos = new File(RUTA_CARPETA_DATOS);
         File archivo = new File(RUTA_LOG);
 
-        if (!carpetaDatos.exists() && !carpetaDatos.isDirectory()) {
+        if (!carpetaDatos.exists() || !carpetaDatos.isDirectory()) {
             carpetaDatos.mkdir();
         }
 

@@ -34,6 +34,7 @@ public class App {
         }
 
         UtilidadLog.registrar(NivelLog.INFO,"Inicio de la aplicacíon");
+        SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
 
         if (consoleMode){
             console();
