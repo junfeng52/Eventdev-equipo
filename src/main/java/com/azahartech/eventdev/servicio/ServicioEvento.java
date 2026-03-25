@@ -2,6 +2,7 @@ package com.azahartech.eventdev.servicio;
 
 import com.azahartech.eventdev.modelo.*;
 import com.azahartech.eventdev.datos.RepositorioGenerico;
+import com.azahartech.eventdev.util.UtilidadLog;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -158,47 +159,49 @@ public class ServicioEvento {
                 try {
                     nombreStr = datos[0];
                 } catch (RuntimeException e) {
-                    System.out.println("Error en línea" + numlinea + ": Nombre invalido.");
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Nombre invalido. Log: " + e);
                     nombreStr = null;
                 }
 
                 try {
                     ciudadStr = datos[1];
                 } catch (RuntimeException e) {
-                    System.out.println("Error en línea" + numlinea + ": Ciudad invalido.");
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Ciudad invalido. Log: " + e);
                     ciudadStr = null;
                 }
 
                 try {
                     fecha = LocalDate.parse(datos[2]);
                 } catch (RuntimeException e) {
-                    System.out.println("Error en línea" + numlinea + ": Fecha invalido.");
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Fecha invalido. Log: " + e);
                     fecha = null;
                 }
 
                 try {
                     aforoInt = Integer.parseInt(datos[3]);
                 } catch (RuntimeException e) {
-                    System.out.println("Error en línea" + numlinea + ": Aforo invalido.");
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Aforo invalido. Log: " + e);
                     aforoInt = 0;
                 }
 
                 try {
                     precioDouble = Double.parseDouble(datos[4]);
                 } catch (RuntimeException e) {
-                    System.out.println("Error en línea" + numlinea + ": Precio invalido.");
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Precio invalido. Log: " + e);
                     precioDouble = 0;
                 }
 
                 Partido nuevoEvento = new Partido(nombreStr, fecha, new Recinto(ciudadStr, null, aforoInt), precioDouble, null, null, 0);
 
                 this.repo.guardar(nuevoEvento);
-                System.out.println("Importado: " + nombreStr);
+                UtilidadLog.registrar(NivelLog.INFO, "Importado: " + nombreStr);
             }
         }catch (FileNotFoundException e) {
-            System.err.println("Archivo no encontrado");
+            UtilidadLog.registrar(NivelLog.ERROR, "Archivo no encontrado");
         } catch (IOException e) {
-            System.err.println("Error de lectura");
+            UtilidadLog.registrar(NivelLog.ERROR, "Error de lectura");
         }
     }
+
+
 }

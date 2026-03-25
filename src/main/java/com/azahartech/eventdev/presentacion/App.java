@@ -5,6 +5,7 @@ import com.azahartech.eventdev.pagos.PagoBizum;
 import com.azahartech.eventdev.pagos.PagoPaypal;
 import com.azahartech.eventdev.pagos.ProcesadorPago;
 import com.azahartech.eventdev.servicio.*;
+import com.azahartech.eventdev.util.UtilidadLog;
 import com.azahartech.eventdev.util.UtilidadValidacion;
 import com.azahartech.eventdev.vista.*;
 
@@ -31,6 +32,9 @@ public class App {
                 consoleMode = true;
             }
         }
+
+        UtilidadLog.registrar(NivelLog.INFO,"Inicio de la aplicacíon");
+
         if (consoleMode){
             console();
 

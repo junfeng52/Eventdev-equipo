@@ -23,4 +23,6 @@ class UtilidadValidacionTest {
         assertEquals("EVT-"+ LocalDate.now().getYear()+"-DEFAU", UtilidadValidacion.generaraIdAutomatico(""));
         assertEquals("EVT-"+ LocalDate.now().getYear()+"-DEFAU", UtilidadValidacion.generaraIdAutomatico("       "));
     }
+
+
 }
