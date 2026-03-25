@@ -159,6 +159,7 @@ public class ServicioEvento {
                 try {
                     nombreStr = datos[0];
                 } catch (RuntimeException e) {
+                    System.out.println("WARN: Fallo en línea" + numlinea + ": Nombre invalido. Log: " + e);
                     UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Nombre invalido. Log: " + e);
                     nombreStr = null;
                 }
@@ -166,6 +167,7 @@ public class ServicioEvento {
                 try {
                     ciudadStr = datos[1];
                 } catch (RuntimeException e) {
+                    System.out.println("WARN: Fallo en línea" + numlinea + ": Ciudad invalido. Log: " + e);
                     UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Ciudad invalido. Log: " + e);
                     ciudadStr = null;
                 }
@@ -173,6 +175,7 @@ public class ServicioEvento {
                 try {
                     fecha = LocalDate.parse(datos[2]);
                 } catch (RuntimeException e) {
+                    System.out.println("WARN: Fallo en línea" + numlinea + ": Fecha invalido. Log: " + e);
                     UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Fecha invalido. Log: " + e);
                     fecha = null;
                 }
@@ -180,6 +183,7 @@ public class ServicioEvento {
                 try {
                     aforoInt = Integer.parseInt(datos[3]);
                 } catch (RuntimeException e) {
+                    System.out.println("WARN: Fallo en línea" + numlinea + ": Aforo invalido. Log: " + e);
                     UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Aforo invalido. Log: " + e);
                     aforoInt = 0;
                 }
@@ -187,7 +191,8 @@ public class ServicioEvento {
                 try {
                     precioDouble = Double.parseDouble(datos[4]);
                 } catch (RuntimeException e) {
-                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea" + numlinea + ": Precio invalido. Log: " + e);
+                    System.out.println("WARN: Fallo en línea " + numlinea + ": Precio invalido. Log: " + e);
+                    UtilidadLog.registrar(NivelLog.WARN, "Fallo en línea " + numlinea + ": Precio invalido. Log: " + e);
                     precioDouble = 0;
                 }
 
