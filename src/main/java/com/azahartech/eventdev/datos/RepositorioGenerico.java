@@ -54,4 +54,8 @@ public class RepositorioGenerico <T>{
         }
         return resultado;
     }
+
+    public void cargarDatos(List<T> listaACargar) {
+        this.elementos = listaACargar;
+    }
 }

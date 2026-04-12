@@ -18,6 +18,11 @@ public class ServicioEvento {
     private RepositorioGenerico<Evento> repo = new RepositorioGenerico<>();
     private HashMap<String, Evento> mapaEventos = new HashMap<>();
 
+    public ServicioEvento(){
+        GestorPersistencia gestorPersistencia = new GestorPersistencia();
+        repo.cargarDatos(gestorPersistencia.cargarDatos(FICHERO_DATOS));
+    }
+
     /**
      * Añadir un evento
      * @param nuevoEvento
