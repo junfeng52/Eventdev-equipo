@@ -3,6 +3,7 @@ package com.azahartech.eventdev.modelo;
 import com.azahartech.eventdev.util.Exportable;
 import com.azahartech.eventdev.util.UtilidadValidacion;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -14,8 +15,9 @@ import java.time.LocalDate;
  * proporciona métodos para calcular precios de venta con margen estándar.
  */
 
-public abstract class Evento implements Exportable {
+public abstract class Evento implements Exportable, Serializable {
 
+    private static final long serialVersionUID = 1L;
 
     private String nombre;
     private LocalDate fecha;

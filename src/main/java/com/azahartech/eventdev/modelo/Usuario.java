@@ -20,7 +20,7 @@ public class Usuario implements Exportable {
     private String nombre;
     private String email;
     private String telefono;
-    private boolean esVip;
+    private transient boolean esVip;
     private ProcesadorPago tipoPago;
 
     /**

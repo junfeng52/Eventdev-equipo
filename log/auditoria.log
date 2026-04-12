@@ -9,3 +9,23 @@
 [2026-03-25 17:30:55] [WARN] Fallo en línea7: Aforo invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
 [2026-03-25 17:30:55] [WARN] Fallo en línea 7: Precio invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 2
 [2026-03-25 17:30:55] [INFO] Importado: HOla
+[2026-04-12 10:21:07] [INFO] Inicio de la aplicacíon
+[2026-04-12 10:21:07] [INFO] Importado: Feria del Libro
+[2026-04-12 10:21:07] [INFO] Importado: Feria del Libro 1
+[2026-04-12 10:21:07] [INFO] Importado: Feria del Libro 2
+[2026-04-12 10:21:07] [INFO] Importado: Feria del Libro 3
+[2026-04-12 10:21:07] [INFO] Importado: Feria del Libro 4
+[2026-04-12 10:21:07] [WARN] Fallo en línea7: Fecha invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+[2026-04-12 10:21:07] [WARN] Fallo en línea7: Aforo invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
+[2026-04-12 10:21:07] [WARN] Fallo en línea 7: Precio invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 2
+[2026-04-12 10:21:07] [INFO] Importado: HOla
+[2026-04-12 10:35:31] [INFO] Inicio de la aplicacíon
+[2026-04-12 10:35:31] [INFO] Importado: Feria del Libro
+[2026-04-12 10:35:31] [INFO] Importado: Feria del Libro 1
+[2026-04-12 10:35:31] [INFO] Importado: Feria del Libro 2
+[2026-04-12 10:35:31] [INFO] Importado: Feria del Libro 3
+[2026-04-12 10:35:31] [INFO] Importado: Feria del Libro 4
+[2026-04-12 10:35:31] [WARN] Fallo en línea7: Fecha invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+[2026-04-12 10:35:31] [WARN] Fallo en línea7: Aforo invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
+[2026-04-12 10:35:31] [WARN] Fallo en línea 7: Precio invalido. Log: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 2
+[2026-04-12 10:35:31] [INFO] Importado: HOla

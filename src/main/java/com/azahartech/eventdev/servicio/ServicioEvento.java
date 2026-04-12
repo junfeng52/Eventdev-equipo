@@ -2,6 +2,7 @@ package com.azahartech.eventdev.servicio;
 
 import com.azahartech.eventdev.modelo.*;
 import com.azahartech.eventdev.datos.RepositorioGenerico;
+import com.azahartech.eventdev.util.GestorPersistencia;
 import com.azahartech.eventdev.util.UtilidadLog;
 
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ import java.io.*;
  * Clase ServicioEvento
  */
 public class ServicioEvento {
+    private static final String FICHERO_DATOS = "datos/eventos.dat";
     private RepositorioGenerico<Evento> repo = new RepositorioGenerico<>();
     private HashMap<String, Evento> mapaEventos = new HashMap<>();
 
@@ -208,5 +210,10 @@ public class ServicioEvento {
         }
     }
 
+    public void guardar() {
+        GestorPersistencia gestorPersistencia = new GestorPersistencia();
+
+        gestorPersistencia.guardarDatos(repo.listar(), FICHERO_DATOS);
+    }
 
 }

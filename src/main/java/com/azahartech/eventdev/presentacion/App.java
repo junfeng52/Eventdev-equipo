@@ -20,6 +20,7 @@ public class App {
 
     private static boolean demoMode = false;
     private static boolean consoleMode = false;
+    public static boolean guardarEvento = false;
 
     private static boolean continuidad = true;
 
@@ -30,11 +31,21 @@ public class App {
                 demoMode = true;
             } else if (arg.equalsIgnoreCase("--console") || arg.equalsIgnoreCase("-c")) {
                 consoleMode = true;
+            } else if (arg.equalsIgnoreCase("--guardar-evento")) {
+                guardarEvento = true;
             }
         }
 
         UtilidadLog.registrar(NivelLog.INFO,"Inicio de la aplicacíon");
         SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
+
+        if (demoMode) {
+            generarDemo();
+        }
+
+        if (guardarEvento) {
+            SERVICIO_EVENTO.guardar();
+        }
 
         if (consoleMode){
             console();
@@ -61,10 +72,7 @@ public class App {
                 =====================================================
                 """);
 
-        if (demoMode) {
-            generarDemo();
-
-        } else {
+        if (!demoMode) {
             System.out.println("[FASE 1: REGISTRO DE USUARIOS]");
             registrarUsuarios();
 
