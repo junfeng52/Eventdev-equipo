@@ -146,5 +146,6 @@ public class NuevoEventoDialog extends JDialog {
             JOptionPane.showMessageDialog(this, msg + String.join("\n", invalidos));
         }
 
+        this.dispose();
     }
 }

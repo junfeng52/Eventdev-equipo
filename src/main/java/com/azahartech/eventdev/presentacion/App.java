@@ -21,6 +21,7 @@ public class App {
     private static boolean demoMode = false;
     private static boolean consoleMode = false;
     public static boolean guardarEvento = false;
+    public static boolean importarEventos = false;
 
     private static boolean continuidad = true;
 
@@ -31,20 +32,20 @@ public class App {
                 demoMode = true;
             } else if (arg.equalsIgnoreCase("--console") || arg.equalsIgnoreCase("-c")) {
                 consoleMode = true;
-            } else if (arg.equalsIgnoreCase("--guardar-evento")) {
-                guardarEvento = true;
+            } else if (arg.equalsIgnoreCase("--importar")) {
+                importarEventos = true;
             }
         }
 
         UtilidadLog.registrar(NivelLog.INFO,"Inicio de la aplicacíon");
-        SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
+
 
         if (demoMode) {
             generarDemo();
         }
 
-        if (guardarEvento) {
-            SERVICIO_EVENTO.guardar();
+        if (importarEventos) {
+            SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
         }
 
         if (consoleMode){

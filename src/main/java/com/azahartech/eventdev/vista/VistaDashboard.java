@@ -141,9 +141,9 @@ public class VistaDashboard extends JFrame {
             }
         };
 
-        for (int i = 0; i < 100; i++) {
-            servicioEvento.registrarEvento(new Partido("Partido " + i, LocalDate.now().plusDays(i), new Recinto("Recinto " + i, "Direccion " + i, (int) Math.pow(i + Math.sqrt(i+1) ,i)), (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100, "EquipoLocal " + i, "EquipoVisitante " + i, (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100));
-        }
+//        for (int i = 0; i < 100; i++) {
+//            servicioEvento.registrarEvento(new Partido("Partido " + i, LocalDate.now().plusDays(i), new Recinto("Recinto " + i, "Direccion " + i, (int) Math.pow(i + Math.sqrt(i+1) ,i)), (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100, "EquipoLocal " + i, "EquipoVisitante " + i, (double) Math.round(Math.pow(i+1 + Math.sqrt(i+1) , Math.random()*3)*100)/100));
+//        }
 
         refrescarTabla();
 
@@ -208,9 +208,9 @@ public class VistaDashboard extends JFrame {
         eventosTableModel.setRowCount(0);
         for (Evento evento : servicioEvento.listarTodosLosEventos()) {
             Object[] datos = {evento.getId(), evento.getNombre(), evento.getFecha(), evento.getPrecio()};
-
             eventosTableModel.addRow(datos);
         }
+        servicioEvento.guardar();
     }
 
     private void verDetalles() {
