@@ -17,9 +17,10 @@ public class ServicioEvento {
     private static final String FICHERO_DATOS = "datos/eventos.dat";
     private RepositorioGenerico<Evento> repo = new RepositorioGenerico<>();
     private HashMap<String, Evento> mapaEventos = new HashMap<>();
+    private GestorPersistencia gestorPersistencia = new GestorPersistencia();
+
 
     public ServicioEvento(){
-        GestorPersistencia gestorPersistencia = new GestorPersistencia();
         repo.cargarDatos(gestorPersistencia.cargarDatos(FICHERO_DATOS));
     }
 
@@ -216,8 +217,6 @@ public class ServicioEvento {
     }
 
     public void guardar() {
-        GestorPersistencia gestorPersistencia = new GestorPersistencia();
-
         gestorPersistencia.guardarDatos(repo.listar(), FICHERO_DATOS);
     }
 

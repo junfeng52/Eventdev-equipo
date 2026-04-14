@@ -22,6 +22,8 @@ public class App {
     private static boolean consoleMode = false;
     public static boolean guardarEvento = false;
     public static boolean importarEventos = false;
+    public static boolean guardarUsuarios = false;
+    public static boolean importarUsuarios = false;
 
     private static boolean continuidad = true;
 
@@ -32,8 +34,12 @@ public class App {
                 demoMode = true;
             } else if (arg.equalsIgnoreCase("--console") || arg.equalsIgnoreCase("-c")) {
                 consoleMode = true;
-            } else if (arg.equalsIgnoreCase("--importar")) {
+            } else if (arg.equalsIgnoreCase("--importar_eventos")  || arg.equalsIgnoreCase("-ie")) {
                 importarEventos = true;
+            } else if (arg.equalsIgnoreCase("--guardar_eventos") || arg.equalsIgnoreCase("-ge")) {
+                guardarEvento = true;
+            } else if (arg.equalsIgnoreCase("--guardar_usuarios") || arg.equalsIgnoreCase("-gu")) {
+                guardarUsuarios = true;
             }
         }
 
@@ -47,6 +53,14 @@ public class App {
         if (importarEventos) {
             SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
         }
+
+        if (guardarUsuarios) {
+            for (Usuario usuario : SERVICIO_USUARIO.listarTodosLosUsuario()) {
+                System.out.println(usuario.getIntentosLogin());
+            }
+            SERVICIO_USUARIO.guardar();
+        }
+
 
         if (consoleMode){
             console();

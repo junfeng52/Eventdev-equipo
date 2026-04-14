@@ -2,13 +2,20 @@ package com.azahartech.eventdev.servicio;
 
 import com.azahartech.eventdev.datos.RepositorioGenerico;
 import com.azahartech.eventdev.modelo.Usuario;
+import com.azahartech.eventdev.util.GestorPersistencia;
 
 import java.util.List;
 import java.util.Map;
 
 public class ServicioUsuario {
+    private static final String FICHERO_DATOS = "datos/usuarios.dat";
     private RepositorioGenerico<Usuario> repositorio = new RepositorioGenerico<>();
     private Map<String, Usuario> mapa;
+    private GestorPersistencia gestorPersistencia = new GestorPersistencia();
+
+    public ServicioUsuario() {
+        this.repositorio.cargarDatos(gestorPersistencia.cargarDatos(FICHERO_DATOS));
+    }
 
     /**
      * Función para guardar el usuario dentro de el repositorio.
@@ -48,4 +55,7 @@ public class ServicioUsuario {
         return repositorio.listar();
     }
 
+    public void guardar() {
+        gestorPersistencia.guardarDatos(repositorio.listar(), FICHERO_DATOS);
+    }
 }
