@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogo_eventos>
+    <lista id="EVT-2026-FEDEL">
+        <nombre>Feria del Libro</nombre>
+        <fecha>2025-05-10</fecha>
+        <recinto>
+            <aforoMaximo>5000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL1">
+        <nombre>Feria del Libro 1</nombre>
+        <fecha>2025-05-11</fecha>
+        <recinto>
+            <aforoMaximo>4000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL2">
+        <nombre>Feria del Libro 2</nombre>
+        <fecha>2025-05-12</fecha>
+        <recinto>
+            <aforoMaximo>7000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL3">
+        <nombre>Feria del Libro 3</nombre>
+        <fecha>2025-05-13</fecha>
+        <recinto>
+            <aforoMaximo>9000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL4">
+        <nombre>Feria del Libro 4</nombre>
+        <fecha>2025-05-14</fecha>
+        <recinto>
+            <aforoMaximo>10100</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-HOLA">
+        <nombre>HOla</nombre>
+        <recinto>
+            <aforoMaximo>0</aforoMaximo>
+            <nombre>2</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-ASDF">
+        <nombre>asdf</nombre>
+        <fecha>2006-12-31</fecha>
+        <precio>123.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDEL">
+        <nombre>Feria del Libro</nombre>
+        <fecha>2025-05-10</fecha>
+        <recinto>
+            <aforoMaximo>5000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL1">
+        <nombre>Feria del Libro 1</nombre>
+        <fecha>2025-05-11</fecha>
+        <recinto>
+            <aforoMaximo>4000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL2">
+        <nombre>Feria del Libro 2</nombre>
+        <fecha>2025-05-12</fecha>
+        <recinto>
+            <aforoMaximo>7000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL3">
+        <nombre>Feria del Libro 3</nombre>
+        <fecha>2025-05-13</fecha>
+        <recinto>
+            <aforoMaximo>9000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL4">
+        <nombre>Feria del Libro 4</nombre>
+        <fecha>2025-05-14</fecha>
+        <recinto>
+            <aforoMaximo>10100</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-HOLA">
+        <nombre>HOla</nombre>
+        <recinto>
+            <aforoMaximo>0</aforoMaximo>
+            <nombre>2</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDEL">
+        <nombre>Feria del Libro</nombre>
+        <fecha>2025-05-10</fecha>
+        <recinto>
+            <aforoMaximo>5000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL1">
+        <nombre>Feria del Libro 1</nombre>
+        <fecha>2025-05-11</fecha>
+        <recinto>
+            <aforoMaximo>4000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL2">
+        <nombre>Feria del Libro 2</nombre>
+        <fecha>2025-05-12</fecha>
+        <recinto>
+            <aforoMaximo>7000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL3">
+        <nombre>Feria del Libro 3</nombre>
+        <fecha>2025-05-13</fecha>
+        <recinto>
+            <aforoMaximo>9000</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-FEDL4">
+        <nombre>Feria del Libro 4</nombre>
+        <fecha>2025-05-14</fecha>
+        <recinto>
+            <aforoMaximo>10100</aforoMaximo>
+            <nombre>Madrid</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-HOLA">
+        <nombre>HOla</nombre>
+        <recinto>
+            <aforoMaximo>0</aforoMaximo>
+            <nombre>2</nombre>
+        </recinto>
+        <precio>0.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-ASDF">
+        <nombre>asdf</nombre>
+        <fecha>2001-12-31</fecha>
+        <precio>123.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV1">
+        <nombre>Concierto Evento 1</nombre>
+        <fecha>2021-12-31</fecha>
+        <recinto>
+            <aforoMaximo>100</aforoMaximo>
+            <direccion>direccion1</direccion>
+            <nombre>recinto1</nombre>
+        </recinto>
+        <precio>100.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV3">
+        <nombre>Concierto Evento 3</nombre>
+        <fecha>2033-12-31</fecha>
+        <recinto>
+            <aforoMaximo>120</aforoMaximo>
+            <direccion>direccion3</direccion>
+            <nombre>recinto3</nombre>
+        </recinto>
+        <precio>120.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV5">
+        <nombre>Concierto Evento 5</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>140</aforoMaximo>
+            <direccion>direccion5</direccion>
+            <nombre>recinto5</nombre>
+        </recinto>
+        <precio>140.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-COEV7">
+        <nombre>Concierto Evento 7</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>160</aforoMaximo>
+            <direccion>direccion7</direccion>
+            <nombre>recinto7</nombre>
+        </recinto>
+        <precio>160.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>CONCIERTO</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV2">
+        <nombre>Partido Evento 2</nombre>
+        <fecha>2022-12-31</fecha>
+        <recinto>
+            <aforoMaximo>110</aforoMaximo>
+            <direccion>direccion2</direccion>
+            <nombre>recinto2</nombre>
+        </recinto>
+        <precio>110.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV4">
+        <nombre>Partido Evento 4</nombre>
+        <fecha>2031-12-31</fecha>
+        <recinto>
+            <aforoMaximo>130</aforoMaximo>
+            <direccion>direccion4</direccion>
+            <nombre>recinto4</nombre>
+        </recinto>
+        <precio>130.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV6">
+        <nombre>Partido Evento 6</nombre>
+        <fecha>2026-12-31</fecha>
+        <recinto>
+            <aforoMaximo>150</aforoMaximo>
+            <direccion>direccion6</direccion>
+            <nombre>recinto6</nombre>
+        </recinto>
+        <precio>150.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+    <lista id="EVT-2026-PAEV8">
+        <nombre>Partido Evento 8</nombre>
+        <fecha>2027-12-31</fecha>
+        <recinto>
+            <aforoMaximo>170</aforoMaximo>
+            <direccion>direccion8</direccion>
+            <nombre>recinto8</nombre>
+        </recinto>
+        <precio>170.0</precio>
+        <estado>PLANIFICADO</estado>
+        <tipo>DEPORTE</tipo>
+    </lista>
+</catalogo_eventos>

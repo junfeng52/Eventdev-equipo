@@ -24,6 +24,7 @@ public class App {
     public static boolean importarEventos = false;
     public static boolean guardarUsuarios = false;
     public static boolean importarUsuarios = false;
+    public static boolean exportarCatalogo = false;
 
     private static boolean continuidad = true;
 
@@ -40,6 +41,8 @@ public class App {
                 guardarEvento = true;
             } else if (arg.equalsIgnoreCase("--guardar_usuarios") || arg.equalsIgnoreCase("-gu")) {
                 guardarUsuarios = true;
+            } else if (arg.equalsIgnoreCase("--exportar_catalogo") || arg.equalsIgnoreCase("-ec")) {
+                exportarCatalogo = true;
             }
         }
 
@@ -52,6 +55,10 @@ public class App {
 
         if (importarEventos) {
             SERVICIO_EVENTO.importarEventosDesdeCSV("datos/eventos_importar.csv");
+        }
+
+        if (exportarCatalogo) {
+            SERVICIO_EVENTO.exportarCatalogoAXML("datos/agenda_export.xml");
         }
 
         if (guardarUsuarios) {
