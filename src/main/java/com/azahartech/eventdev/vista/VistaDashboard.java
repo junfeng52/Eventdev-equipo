@@ -1,20 +1,15 @@
 package com.azahartech.eventdev.vista;
 
 import com.azahartech.eventdev.modelo.Evento;
-import com.azahartech.eventdev.modelo.Partido;
-import com.azahartech.eventdev.modelo.Recinto;
 import com.azahartech.eventdev.servicio.ServicioEvento;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.io.File;
 
 import static com.azahartech.eventdev.presentacion.App.SERVICIO_EVENTO;
 
@@ -29,6 +24,17 @@ public class VistaDashboard extends JFrame {
     private ServicioEvento servicioEvento;
 
     private JTable eventosTable;
+
+    private JMenuBar principalMenuBar;
+
+    private JMenu archivoMenu;
+
+    private JMenuItem importarMenuItem;
+    private JMenuItem exportarMenuItem;
+    private JMenuItem cerrarSessiónMenuItem;
+    private JMenuItem salirMenuItem;
+
+    private JMenu accionesMenu;
 
     private JMenuItem nuevoEventoItem;
 
@@ -167,32 +173,40 @@ public class VistaDashboard extends JFrame {
     }
 
     private void initMenuBar() {
-        JMenuBar principalMenuBar = new JMenuBar();
+        this.principalMenuBar = new JMenuBar();
 
-        JMenu archivoMenu = new JMenu("Archivo");
-        JMenu accionesMenu = new JMenu("Acciones");
+        this.archivoMenu = new JMenu("Archivo");
 
-        JMenuItem cerrarSessiónMenuItem = new JMenuItem("Cerrar sessión");
-        JMenuItem salirMenuItem = new JMenuItem("Salir");
+        this.importarMenuItem = new JMenuItem("Importar");
+        this.exportarMenuItem = new JMenuItem("Exportar a XML");
+        this.cerrarSessiónMenuItem = new JMenuItem("Cerrar sessión");
+        this.salirMenuItem = new JMenuItem("Salir");
 
-        cerrarSessiónMenuItem.addActionListener(action -> intentarCerrarSession());
-        salirMenuItem.addActionListener(action -> intentarSalir());
+        this.archivoMenu.add(this.importarMenuItem);
+        this.archivoMenu.add(this.exportarMenuItem);
+        this.archivoMenu.add(this.cerrarSessiónMenuItem);
+        this.archivoMenu.add(this.salirMenuItem);
 
-        archivoMenu.add(cerrarSessiónMenuItem);
-        archivoMenu.add(salirMenuItem);
+        this.accionesMenu = new JMenu("Acciones");
 
-        nuevoEventoItem = new JMenuItem("Nuevo evento");
+        this.nuevoEventoItem = new JMenuItem("Nuevo evento");
 
-        accionesMenu.add(nuevoEventoItem);
+        this.accionesMenu.add(this.nuevoEventoItem);
 
-        principalMenuBar.add(archivoMenu);
-        principalMenuBar.add(accionesMenu);
+        this.principalMenuBar.add(archivoMenu);
+        this.principalMenuBar.add(accionesMenu);
 
-        this.setJMenuBar(principalMenuBar);
+        this.setJMenuBar(this.principalMenuBar);
     }
 
     private void initListeners(){
-        nuevoEventoItem.addActionListener(action -> crearNuevoEvento());
+        this.nuevoEventoItem.addActionListener(action -> crearNuevoEvento());
+
+        this.importarMenuItem.addActionListener(action -> importarEventos());
+        this.exportarMenuItem.addActionListener(action -> exportarEventos());
+
+        this.cerrarSessiónMenuItem.addActionListener(action -> intentarCerrarSession());
+        this.salirMenuItem.addActionListener(action -> intentarSalir());
 
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -245,6 +259,34 @@ public class VistaDashboard extends JFrame {
 
         if (confirmar == JOptionPane.YES_OPTION) {
             System.exit(0);
+        }
+    }
+
+    private void importarEventos() {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Archivo Xml", "xml"));
+        fileChooser.showOpenDialog(this);
+        File file =  fileChooser.getSelectedFile();
+
+        if (file != null) {
+            this.servicioEvento.importarCatalogoDesdeXML(file.getAbsolutePath());
+            refrescarTabla();
+            JOptionPane.showMessageDialog(this, "Eventos importados con exito.");
+        } else  {
+            JOptionPane.showMessageDialog(this, "El archivo no se puede importar.");
+        }
+    }
+
+    private void exportarEventos() {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.showSaveDialog(this);
+        File file =  fileChooser.getSelectedFile();
+        if (file != null) {
+            this.servicioEvento.exportarCatalogoAXML(file.getAbsolutePath());
+            JOptionPane.showMessageDialog(this, "El archivo se ha exportar.");
+        } else {
+            JOptionPane.showMessageDialog(this, "El archivo no se puede exportar.");
         }
     }
 }
