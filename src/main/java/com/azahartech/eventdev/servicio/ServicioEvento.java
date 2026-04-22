@@ -236,10 +236,13 @@ public class ServicioEvento {
 
             marshaller.marshal(wrapper, new File(rutaArchivo));
 
-
         } catch (JAXBException e) {
             e.printStackTrace();
         }
+    }
+
+    public void importCatalogoAXML(String rutaArchivo) {
+
     }
 
 }
