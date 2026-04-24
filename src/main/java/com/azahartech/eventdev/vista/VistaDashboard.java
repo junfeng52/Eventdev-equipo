@@ -282,6 +282,9 @@ public class VistaDashboard extends JFrame {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.showSaveDialog(this);
         File file =  fileChooser.getSelectedFile();
+        if (!file.getAbsolutePath().endsWith(".xml")) {
+            file = new File(file.getAbsolutePath() + ".xml");
+        }
         if (file != null) {
             this.servicioEvento.exportarCatalogoAXML(file.getAbsolutePath());
             JOptionPane.showMessageDialog(this, "El archivo se ha exportar.");
