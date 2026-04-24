@@ -34,6 +34,8 @@ public class VistaDashboard extends JFrame {
     private JMenuItem cerrarSessiónMenuItem;
     private JMenuItem salirMenuItem;
 
+    private JFileChooser fileChooser = new JFileChooser();
+
     private JMenu accionesMenu;
 
     private JMenuItem nuevoEventoItem;
@@ -44,7 +46,8 @@ public class VistaDashboard extends JFrame {
     public VistaDashboard(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
         this.servicioEvento = SERVICIO_EVENTO;
-
+        this.fileChooser.setFileFilter(new FileNameExtensionFilter("Archivo Xml", "xml"));
+        this.fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         initFrame();
 
         initUI();
@@ -263,11 +266,8 @@ public class VistaDashboard extends JFrame {
     }
 
     private void importarEventos() {
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        fileChooser.setFileFilter(new FileNameExtensionFilter("Archivo Xml", "xml"));
-        fileChooser.showOpenDialog(this);
-        File file =  fileChooser.getSelectedFile();
+        this.fileChooser.showOpenDialog(this);
+        File file = this.fileChooser.getSelectedFile();
 
         if (file != null) {
             this.servicioEvento.importarCatalogoDesdeXML(file.getAbsolutePath());
@@ -279,9 +279,8 @@ public class VistaDashboard extends JFrame {
     }
 
     private void exportarEventos() {
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.showSaveDialog(this);
-        File file =  fileChooser.getSelectedFile();
+        this.fileChooser.showSaveDialog(this);
+        File file = fileChooser.getSelectedFile();
         if (!file.getAbsolutePath().endsWith(".xml")) {
             file = new File(file.getAbsolutePath() + ".xml");
         }

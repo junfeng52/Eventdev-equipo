@@ -25,6 +25,7 @@ public class App {
     public static boolean guardarUsuarios = false;
     public static boolean importarUsuarios = false;
     public static boolean exportarCatalogo = false;
+    public static boolean skipLogin = false;
 
     private static boolean continuidad = true;
 
@@ -43,6 +44,8 @@ public class App {
                 guardarUsuarios = true;
             } else if (arg.equalsIgnoreCase("--exportar_catalogo") || arg.equalsIgnoreCase("-ec")) {
                 exportarCatalogo = true;
+            } else if (arg.equalsIgnoreCase("--skip_login") || arg.equalsIgnoreCase("-sl")) {
+                skipLogin = true;
             }
         }
 
@@ -80,9 +83,11 @@ public class App {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                new VistaLogin().setVisible(true);
-                //new VistaRegistro(SERVICIO_EVENTO).setVisible(true);
-                new VistaDashboard("").setVisible(true);
+                if (skipLogin) {
+                    new VistaDashboard("Test").setVisible(true);
+                } else {
+                    new VistaLogin().setVisible(true);
+                }
             });
         }
     }
