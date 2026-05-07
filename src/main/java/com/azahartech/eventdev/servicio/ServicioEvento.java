@@ -1,5 +1,6 @@
 package com.azahartech.eventdev.servicio;
 
+import com.azahartech.eventdev.datos.EventoRepositorio;
 import com.azahartech.eventdev.datos.ListaEventosWrapper;
 import com.azahartech.eventdev.modelo.*;
 import com.azahartech.eventdev.datos.RepositorioGenerico;
@@ -21,12 +22,14 @@ import java.io.*;
 public class ServicioEvento {
     private static final String FICHERO_DATOS = "datos/eventos.dat";
     private RepositorioGenerico<Evento> repo = new RepositorioGenerico<>();
+    private EventoRepositorio eventoRepositorio = new EventoRepositorio();
     private HashMap<String, Evento> mapaEventos = new HashMap<>();
     private GestorPersistencia gestorPersistencia = new GestorPersistencia();
 
 
     public ServicioEvento(){
-        repo.cargarDatos(gestorPersistencia.cargarDatos(FICHERO_DATOS));
+//        repo.cargarDatos(gestorPersistencia.cargarDatos(FICHERO_DATOS));
+        repo.cargarDatos(eventoRepositorio.listarTodos());
     }
 
     /**
@@ -34,8 +37,9 @@ public class ServicioEvento {
      * @param nuevoEvento
      */
     public void registrarEvento(Evento nuevoEvento) {
-        repo.guardar(nuevoEvento);
-        mapaEventos.put(nuevoEvento.getId(), nuevoEvento);
+//        repo.guardar(nuevoEvento);
+//        mapaEventos.put(nuevoEvento.getId(), nuevoEvento);
+        eventoRepositorio.guardar(nuevoEvento);
     }
 
     /**
@@ -68,8 +72,9 @@ public class ServicioEvento {
     /**
      * Mostrar catalogo
      */
-    public void mostrarTodoElCatalogo() {
-        mapaEventos.values().forEach(Evento::mostrarInformacion);
+    public List<Evento> mostrarTodoElCatalogo() {
+//        mapaEventos.values().forEach(Evento::mostrarInformacion);
+        return eventoRepositorio.listarTodos();
     }
 
     /**
