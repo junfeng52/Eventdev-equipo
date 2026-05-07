@@ -20,6 +20,7 @@ import java.time.LocalDate;
 
 @XmlRootElement(name = "evento")
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlSeeAlso({Partido.class, Concierto.class})
 public abstract class Evento implements Exportable, Serializable {
     @XmlTransient
     private static final long serialVersionUID = 1L;

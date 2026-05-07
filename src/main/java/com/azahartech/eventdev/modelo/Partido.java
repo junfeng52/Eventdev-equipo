@@ -1,10 +1,16 @@
 package com.azahartech.eventdev.modelo;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
 import java.time.LocalDate;
 
 /**
  * Clase Partido
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Partido extends Evento {
     private String equipoLocal;
     private String equipoVisitante;
@@ -12,6 +18,7 @@ public class Partido extends Evento {
     private double costeArbitraje;
     private String resultadoMarcador;
 
+    public Partido() {}
 
     public Partido(String nombre, LocalDate fecha, Recinto recinto, double precio, String equipoLocal, String equipoVisitante, double costeSeguridad) {
         super(nombre, fecha, recinto, precio,TipoEvento.DEPORTE);
